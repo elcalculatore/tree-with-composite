@@ -32,10 +32,10 @@ public class TestTree {
             if (nodes.item(i).getNodeType() == Node.ELEMENT_NODE) {
                 Element el = (Element) nodes.item(i);
                 if (el.getNodeName().equals("file")) {
-                    Composant monfichier = new Fichier(el.getAttribute("name"), racine.getbranche() + 1);
+                    Composant monfichier = new Fichier(el.getAttribute("name"), racine.getBranche() + 1);
                     racine.ajouter(monfichier);
                 } else if (el.getNodeName().equals("directory")) {
-                    branche = racine.getbranche() + 1;
+                    branche = racine.getBranche() + 1;
                     racine.ajouter(insertion(el));
                     branche--;
                 }
